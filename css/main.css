@@ -25,10 +25,31 @@ nav .primo-nav::after, nav .secondo-nav::after{
     float: left;
 }
 .contatti{
-    background-color: red;
+    display: inline-block;
+    margin-top: 20px;
+
+    /* background-color: red; */
 }
 .bottoni{
     background-color: yellow;
+    content: "";
+    display: table;
+    clear: both;
+}
+.scelta{
+
+}
+.senza-bordi{
+    display: inline-block;
+    border-right: 1px solid black;
+    margin-left: 10px;
+    /* background-color: red; */
+    height: 15px;
+}
+.us{
+    margin-left: 10px;
+    text-decoration: none;
+    color: gray;
 }
 /* ----------------------------- */
 
