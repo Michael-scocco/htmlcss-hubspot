@@ -3,3 +3,46 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#image{
+    background-image:url(../img/jumbotron.png);
+    background-size: cover;
+    min-height: 600px;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+nav .primo-nav::after, nav .secondo-nav::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.contatti, .bottoni{
+    height: 100px;
+    width: 50%;
+    float: left;
+}
+.contatti{
+    background-color: red;
+}
+.bottoni{
+    background-color: yellow;
+}
+/* ----------------------------- */
+
+.logo, .link{
+    height: 100px;
+    width: 50%;
+    float: left;
+}
+
+.logo{
+    background-color: green;
+
+}
+.link{
+    background-color: purple;
+    display:inline-block;
+}
