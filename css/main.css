@@ -3,6 +3,146 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 header{
-    position: relative;
+    /* background-image: url(../img/jumbotron.png); */
+    /* min-height:600px; */
+    /* background-size: cover;
+    background-repeat: no-repeat; */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
+
+
+.row{
+    min-height: 80px;
+}
+
+.row.row-top{
+    background-color: #ccc;
+}
+
+.container{
+    width: 100%;
+    max-width: 1300px;
+    min-height: 100px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+.container::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+.row-top-left{
+    background-color: red;
+    min-width: 100px;
+    height: 100px;
+    float: left;
+}
+.row-top-right{
+    background-color: green;
+    min-width: 100px;
+    height: 100px;
+    float: right;
+}
+
+.row-top-left2{
+    background-color: yellow;
+    min-width: 100px;
+    height: 100px;
+    float: left;
+}
+.row-top-right2{
+    background-color: blue;
+    min-width: 100px;
+    height: 100px;
+    float: right;
+}
+
+#jumbotron{
+    min-height: 600px;
+    background-color: #fff1ee;
+}
+
+#powerfull{
+    min-height: 900px;
+    background-color: #f5f8fa;
+}
+
+.card{
+    background-color: white;
+    border-radius: 3px;
+    min-height: 100px;
+    float: left;
+}
+div.card.coll-3{
+    width: calc(calc(100% - 100px) / 3);
+    margin-right: 50px;
+
+}
+div.card-full-width{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+div.card:last-child{
+    margin-right: 0;
+}
+
+.card.coll-3{
+    padding: 20px 50px;
+}
+
+.card div{
+    min-height: 100px;
+    text-align: center;
+
+}
+.coll-3.card div:first-child{
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+}
+.card img{
+    height: 150px;
+
+}
+.button{
+    line-height: 45px;
+    padding: 0 30px;
+    background-color: orange;
+    color: white;
+    border-radius: 3px;
+}
+.card ul{
+    list-style:none;
+    text-align: left;
+}
+/* div.background{
+    background-color: lightgray;
+    height: 100px;
+    border-bottom: 1px solid black;
+
+}
+
+div.central{
+    width: 80%;
+    min-height: 200px;
+    background-color: gray;
+    margin: 0 10%;
+}
+
+
+.menu-nav{
+    background-color: yellow;
+    height: 100px;
+    width: 50%;
+}
+.menu-nav2{
+    background-color: red;
+    height: 100px;
+    width: 50%;
+}
+
+div.menu-nav, div.menu-nav2{
+    float: left;
+} */
