@@ -3,7 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+header{
+    position: relative;
+}
 #image{
     background-image:url(../img/jumbotron.png);
     background-size: cover;
@@ -20,37 +22,53 @@ nav .primo-nav::after, nav .secondo-nav::after{
     clear: both;
 }
 .contatti, .bottoni{
-    height: 100px;
     width: 50%;
     float: left;
 }
 .contatti{
-    display: inline-block;
-    margin-top: 20px;
-
-    /* background-color: red; */
-}
-.bottoni{
-    background-color: yellow;
     content: "";
     display: table;
     clear: both;
+    margin-top: 20px;
+    line-height:5px;
+    /* background-color: red; */
 }
-.scelta{
+.lato{
+    float: left;
+}
 
-}
-.senza-bordi{
-    display: inline-block;
+.centro{
+    float: left;
     border-right: 1px solid black;
     margin-left: 10px;
     /* background-color: red; */
     height: 15px;
 }
-.us{
+.dec{
+    float: left;
     margin-left: 10px;
     text-decoration: none;
     color: gray;
 }
+
+.bottoni{
+    margin-top: 20px;
+    background-color: yellow;
+}
+.lato-2{
+    float: right;
+    margin-right: 10px;
+}
+.centro-2{
+    float: right;
+}
+
+div.bottoni .lato-2:first-child{
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+
 /* ----------------------------- */
 
 .logo, .link{
@@ -66,4 +84,13 @@ nav .primo-nav::after, nav .secondo-nav::after{
 .link{
     background-color: purple;
     display:inline-block;
+}
+
+.contenitore-titolo{
+    position: absolute;
+    background-color: black;
+    height: 100px;
+    margin-top: 300px;
+    z-index: 10;
+    width: 33%;
 }
