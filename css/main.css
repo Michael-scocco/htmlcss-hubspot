@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* ____________ALL'HEADER VADO A CREARE UNA OMBREGGIATURA KE SERVE AL FIXED_________ */
 header{
     /* background-image: url(../img/jumbotron.png); */
     /* min-height:600px; */
@@ -12,100 +13,138 @@ header{
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
-
+/* ____________QUI CREO LE RIGHE PER INSERIRE IL CONTAINER_________ */
 .row{
     min-height: 80px;
 }
 
 .row.row-top{
-    background-color: #ccc;
+    background-color: #ccc;    /*_________DEFINISCO IL COLORE SFONDO RIGA SOPRA________*/
 }
 
+/* ________CREO IL CONTAINER DA CENTRALIZZARE I MIEI MENU-LINK___________ */
 .container{
-    width: 100%;
-    max-width: 1300px;
-    min-height: 100px;
+    width: 100%;                /*________AL CONTAINER GLI VADO A DIRE KE DEVE ESSERE AL 100%*/
+    max-width: 1300px;          /*________TUTTO QUELLO KE CI METTO NON DEVE SUPERARE I 1300PX*/
+    min-height: 100px;          /*________ALTEZZA MINIMA 100PX, MA PUO' ESSERE SUPERATA*/
     border: 1px solid black;
-    margin: 0 auto;
+    margin: 0 auto;             /*________VOGLIO CHE SIA CENTRATO ALL'INTERNO DI ROW______*/
 }
-.container::after{
+.container::after{              /*________CREO IL MIO CLEAR-FIX_________*/
     content: "";
     display: table;
     clear: both;
 }
-.row-top-left{
+.row-top-left{                   /*______DICO AL BLOCCO IN ALTO DI ANDARE A SINISTRA______*/
     background-color: red;
-    min-width: 100px;
+    min-width: 100px;            /*______UNA LARGHEZZA CHE PUO' ESSERE SUPERATA_______*/
     height: 100px;
-    float: left;
+    float: left;                 /*______L'HO FLOTTATO A SINISTRA_________*/
 }
-.row-top-right{
+.row-top-right{                  /*_______STESSA COSA AL BLOCCO DI DESTRA DELLA STESSA RIGA____*/
     background-color: green;
     min-width: 100px;
     height: 100px;
-    float: right;
+    float: right;                /*______MA LO DEVO FLOTTARE A DESTRA*/
 }
+
+/* _____________REGOLE BLOCCHI SUPERIORI____________ */
 
 .row-top-left2{
     background-color: yellow;
     min-width: 100px;
     height: 100px;
     float: left;
-}
+}                                 /*RIPETO LE MEDESIME REGOLE CAMBIANDO SOLO IL NOME DELLA CLASSE*/
 .row-top-right2{
     background-color: blue;
     min-width: 100px;
     height: 100px;
     float: right;
 }
+/* ______________FINITO REGOLE BLOCCHI INFERIORI__________ */
+
+
+/* ______________INIZIO REGOLE PRIMA SESSIONE JUOMBOTRON___________ */
 
 #jumbotron{
     min-height: 600px;
     background-color: #fff1ee;
 }
 
+
+
+
+
+
+
+
+
+
+/* _______________INIZO REGOLE DELLA SECONDA SESSIONE POWERFULL___________ */
 #powerfull{
-    min-height: 900px;
-    background-color: #f5f8fa;
+    min-height: 900px;                /*ALTEZZA MINIMA*/
+    background-color: #f5f8fa;        /*QUI ANDRO' A METTERE IMMAGINE TESTO ECC*/
 }
 
+/* ________DOPO L'IMMAGINE ANDREMO A CREARE QUATTRO BLOCCHI, CHE LE CHIAMEREMO CARD, E GLI DIAMO IL FLOAT-LEFT
+___________DATO KE OVVIAMENTE LE ABIAMO MESSE DENTRO IL BLOCCO CONTAINER CHE HA GIA LA REGOLA DEL CLEAR-FIX
+___________MA DATO CHE VOLGIAMO KE UNA CARTA RIMANE SOPRA E SOLO LE 3 SOTTO FLOTTINO CADO A DIRE CON "CALC"
+___________CHE SOLO I DIV, CON CLASSE CARD, E COLL-3, DEVONO ESSERE POSIZIONATI AD UNA CERTA DISTANZA______ */
 .card{
     background-color: white;
     border-radius: 3px;
     min-height: 100px;
     float: left;
 }
+/* __________REGOLA CALC_________ */
+
+/* ________STO DICENDO A CALC, CHE I BLOCCHI DEVONO OCCUPARE IL 100% DELLO SPAZIO AVERE UNA DISTANZA DI 50px
+________L'UNO DALL'ALTRO, E CHE OVVIAMNTE LI DIVIDO IN TRE PARTI UGUALI DATO KE SONO 3 BLOCCHI________ */
 div.card.coll-3{
     width: calc(calc(100% - 100px) / 3);
     margin-right: 50px;
-
 }
+/* ________QUI STO DICENDO CHE TUTTI I DIV CON LA CLASSE CARD-FULL-CHILD, DEVONO ESSERE UNA LARGHEZZA AL 100%
+________E CHE HANNO UNA DISTANZA DI 50px SOTTO DI ESSO_________ */
 div.card-full-width{
     width: 100%;
     margin-bottom: 50px;
 }
 
+/* _______QUI VADO A DIRE CHE L'ULTIMO FIGLIO DENTRO DIV CON NOME "CARTE" MESSO IN FLOAT DEVE AVERE MARGINE
+_______ZERO SULLA DESTRA ALTRIMENTI SCENDERA' SOTTO_________  */
 div.card:last-child{
     margin-right: 0;
 }
 
+/* _________LE CLASSI CARD  COLL-3, DEVONO AVERE AL LORO INTERNO UN "PADDING" PARI A 20 SOPRA SOTTO
+_________50 AI LATI_______ */
 .card.coll-3{
     padding: 20px 50px;
 }
 
+/* ________STIAMO DICENDO CHE TUTTI I DIV FIGLI DELLA CLASSE CARD, DEVONO ESSERE ALTI MINIMO 100PX
+________E KE VOLGIO IL TESTO CENTRATO_______ */
 .card div{
     min-height: 100px;
     text-align: center;
-
 }
+
+/* _______STIAMO DICENDO CHE I DIV FIGLI DELLE CLASSI COOL-3 E CARD, DEVONO AVERE IL PRIMO FIGLIO DIV
+_______ (DATO KE ABBIAMO DUE DIV) CON UN BORDO E DEVE ESSERE DISTANZIATO DI 30px_________ */
+
 .coll-3.card div:first-child{
     border-bottom: 1px solid black;
     padding-bottom: 30px;
 }
+/* ______TUTTE LE IMG FIGLIE DI CARD, DEVONO ESSERE ALTE 150PX______ */
 .card img{
     height: 150px;
-
 }
+
+/* ________AL BUTTON, PER ADATTARLO CADO A DIRGLI KE L'ALTEZZA DELLA LINEA DEVE ESSERE ALTA 45px, E I SUOI
+________LATI DEVONO AVERE 30px AI SUOI LATI________ */
 .button{
     line-height: 45px;
     padding: 0 30px;
@@ -113,36 +152,9 @@ div.card:last-child{
     color: white;
     border-radius: 3px;
 }
+
+/* _________TUTTE LE UL, FIGLIE DI CARD NON DEVONO AVERE I PALLINI E DEVONO ESSERE A SINISTRA DEL DIV________ */
 .card ul{
     list-style:none;
     text-align: left;
 }
-/* div.background{
-    background-color: lightgray;
-    height: 100px;
-    border-bottom: 1px solid black;
-
-}
-
-div.central{
-    width: 80%;
-    min-height: 200px;
-    background-color: gray;
-    margin: 0 10%;
-}
-
-
-.menu-nav{
-    background-color: yellow;
-    height: 100px;
-    width: 50%;
-}
-.menu-nav2{
-    background-color: red;
-    height: 100px;
-    width: 50%;
-}
-
-div.menu-nav, div.menu-nav2{
-    float: left;
-} */
