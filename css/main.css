@@ -181,7 +181,7 @@ li.black-2 a{
 }
 
 
-/* ____________REGOLE DIVISORE________________ */
+/* ____________REGOLE DIVISORE DELLE SESSIONE________________ */
 
 div.division{
     background-color: lightgreen;
@@ -191,7 +191,7 @@ div.division{
     border-bottom: 3px solid black;
 }
 
-
+/* _____________REGOLE TITOLO DEL jumbotron___________ */
 .title{
     margin-top: 50px;
     width: 40%;
@@ -215,13 +215,42 @@ span.subtitle{
     font-size: 12px;
     display: block;
 }
+/* _____________FINE jumbotron___________ */
+
 
 
 /* _______________INIZO REGOLE DELLA SECONDA SESSIONE POWERFULL___________ */
 #powerfull{
     min-height: 900px;                /*ALTEZZA MINIMA*/
     background-color: #f5f8fa;        /*QUI ANDRO' A METTERE IMMAGINE TESTO ECC*/
+
 }
+
+.hiphen{
+    /* width: 100px; */
+}
+
+div.powerfull-image{
+
+    width: calc(100% - 50%);
+    margin-left: 25%;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+div.powerfull-image .image-centre{            /*QUI NON HO CAPITO COME AUMENTARE L'INTERLINEA, ED ALLUNGARE IL TRATTEGGIO*/
+    height: 150px;
+}
+div.powerfull-image h2{
+    padding-bottom: 30px;
+}
+
+div.powerfull-image p{
+    font-size: 15px;
+    text-align: center;
+}
+
 
 /* ________DOPO L'IMMAGINE ANDREMO A CREARE QUATTRO BLOCCHI, CHE LE CHIAMEREMO CARD, E GLI DIAMO IL FLOAT-LEFT
 ___________DATO KE OVVIAMENTE LE ABIAMO MESSE DENTRO IL BLOCCO CONTAINER CHE HA GIA LA REGOLA DEL CLEAR-FIX
@@ -230,9 +259,73 @@ ___________CHE SOLO I DIV, CON CLASSE CARD, E COLL-3, DEVONO ESSERE POSIZIONATI 
 .card{
     background-color: white;
     border-radius: 3px;
-    min-height: 100px;
     float: left;
 }
+/* ______________INIZIO REGOLE PER CARTA IN ALTO______________ */
+
+.float-left{
+    float: left;
+    width: 32%;
+
+}
+.float-right{
+    float:left;
+    width: 46%;
+    text-align: left;
+    padding-top: 75px;
+    margin-left: 0;
+}
+
+.line{
+    border: 1px solid black;
+    width: 64%;
+    display: inline-block;
+    margin-bottom: 4px;
+}
+.card .float-left{
+    padding: 70px 130px;
+    border: 1px solid black;
+}
+
+/* ____________REGOLE CARD IN ALTO LATO DESTRO__________ */
+
+div.card div.float-right h3{
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+div.float-right p{
+    font-size: 16px;
+    padding: 18px 0;
+}
+
+div.card-link{
+    margin-top: 18px;
+}
+ul.link-image li{
+    display: inline-block;
+}
+
+.bold{
+    margin-right: 70px;
+}
+
+/* ______TUTTE LE IMG FIGLIE DI CARD, DEVONO ESSERE ALTE 100PX______ */
+.card img{
+    height: 100px;
+    margin-bottom: 18px;
+}
+
+ul li i.link-check{
+    color: orange;
+    padding-right: 12px;
+}
+
+ul.link-image li{
+    margin-right: 16px;
+}
+
+
 /* __________REGOLA CALC_________ */
 
 /* ________STO DICENDO A CALC, CHE I BLOCCHI DEVONO OCCUPARE IL 100% DELLO SPAZIO AVERE UNA DISTANZA DI 50px
@@ -262,7 +355,7 @@ _________50 AI LATI_______ */
 
 /* ________STIAMO DICENDO CHE TUTTI I DIV FIGLI DELLA CLASSE CARD, DEVONO ESSERE ALTI MINIMO 100PX
 ________E KE VOLGIO IL TESTO CENTRATO_______ */
-.card div{
+.card div.float-left, div.card-bottom{
     min-height: 100px;
     text-align: center;
 }
@@ -274,10 +367,7 @@ _______ (DATO KE ABBIAMO DUE DIV) CON UN BORDO E DEVE ESSERE DISTANZIATO DI 30px
     border-bottom: 1px solid black;
     padding-bottom: 30px;
 }
-/* ______TUTTE LE IMG FIGLIE DI CARD, DEVONO ESSERE ALTE 150PX______ */
-.card img{
-    height: 150px;
-}
+
 
 /* ________AL BUTTON, PER ADATTARLO CADO A DIRGLI KE L'ALTEZZA DELLA LINEA DEVE ESSERE ALTA 45px, E I SUOI
 ________LATI DEVONO AVERE 30px AI SUOI LATI________ */
@@ -286,6 +376,7 @@ ________LATI DEVONO AVERE 30px AI SUOI LATI________ */
     background-color: orange;
     color: white;
     padding: 10px 30px 10px 30px;
+    text-decoration: none;
 }
 
 /* _________TUTTE LE UL, FIGLIE DI CARD NON DEVONO AVERE I PALLINI E DEVONO ESSERE A SINISTRA DEL DIV________ */
