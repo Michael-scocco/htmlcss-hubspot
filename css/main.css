@@ -6,16 +6,13 @@
 
 /* ____________ALL'HEADER VADO A CREARE UNA OMBREGGIATURA KE SERVE AL FIXED_________ */
 header{
-    /* background-image: url(../img/jumbotron.png); */
-    /* min-height:600px; */
-    /* background-size: cover;
-    background-repeat: no-repeat; */
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* ____________QUI CREO LE RIGHE PER INSERIRE IL CONTAINER_________ */
-.row{
+.row-top{
     min-height: 80px;
+    border-bottom: 1px solid black;
 }
 
 .row.row-top{
@@ -27,8 +24,8 @@ header{
     width: 100%;                /*________AL CONTAINER GLI VADO A DIRE KE DEVE ESSERE AL 100%*/
     max-width: 1300px;          /*________TUTTO QUELLO KE CI METTO NON DEVE SUPERARE I 1300PX*/
     min-height: 100px;          /*________ALTEZZA MINIMA 100PX, MA PUO' ESSERE SUPERATA*/
-    border: 1px solid black;
     margin: 0 auto;             /*________VOGLIO CHE SIA CENTRATO ALL'INTERNO DI ROW______*/
+    border: 1px solid black;
 }
 .container::after{              /*________CREO IL MIO CLEAR-FIX_________*/
     content: "";
@@ -36,49 +33,188 @@ header{
     clear: both;
 }
 .row-top-left{                   /*______DICO AL BLOCCO IN ALTO DI ANDARE A SINISTRA______*/
-    background-color: red;
-    min-width: 100px;            /*______UNA LARGHEZZA CHE PUO' ESSERE SUPERATA_______*/
-    height: 100px;
+
     float: left;                 /*______L'HO FLOTTATO A SINISTRA_________*/
+
+    /* background-color: red; */
+    /* min-width: 300px;           _____UNA LARGHEZZA CHE PUO' ESSERE SUPERATA_______*/
+    /* height: 100px; */
 }
 .row-top-right{                  /*_______STESSA COSA AL BLOCCO DI DESTRA DELLA STESSA RIGA____*/
-    background-color: green;
-    min-width: 100px;
-    height: 100px;
+
     float: right;                /*______MA LO DEVO FLOTTARE A DESTRA*/
+    /* min-width: 100px; */
+    /* height: 100px; */
+    /* background-color: green; */
 }
 
 /* _____________REGOLE BLOCCHI SUPERIORI____________ */
 
 .row-top-left2{
-    background-color: yellow;
+    float: left;
+    /* background-color: yellow;
     min-width: 100px;
     height: 100px;
-    float: left;
+     */
 }                                 /*RIPETO LE MEDESIME REGOLE CAMBIANDO SOLO IL NOME DELLA CLASSE*/
 .row-top-right2{
-    background-color: blue;
-    min-width: 100px;
-    height: 100px;
     float: right;
+    /* background-color: blue;
+    min-width: 100px;
+    height: 100px; */
+
 }
-/* ______________FINITO REGOLE BLOCCHI INFERIORI__________ */
+
+/* _________REGOLE LINK ALTO SINISTRA_________ */
+
+div.row-top-left ul.link-menu-top-left li{       /* "LI" FILGIO DI "UL" A SUA VOLTA FIGLIO SI "DIV" DEVONO ESSERE IN LINEA E NON AVERE LA DECORAZIONE________*/
+    display: inline-block;
+    list-style: none;
+    line-height: 20px;
+}
+
+div.row-top-left{
+    padding: 40px 0;
+}
+
+li.black a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+li.border-top-right{
+    padding-right: 14px;
+    border-right: 1px solid black;
+
+}
+
+div.row-top-left li.black > a > span:first-child{
+    padding-right: 6px;
+}
+
+div.row-top-left li.black > a > span.distance:last-child{
+    padding-left: 14px;
+}
+
+/* ______________FINITO REGOLE BLOCCHI SINISTRA____________ */
+
+
+/* _______________INIZIO REGOLE BLOCCHI DESTRA_______________ */
+
+div.row-top-right{
+    padding: 28px 0;
+}
+
+div.row-top-right ul.link-menu-top-right li{
+    display: inline-block;
+    list-style:none;
+    line-height: 20px;
+}
+
+ul.link-menu-top-right li > a{
+    text-decoration: none;
+    margin-left: 25px;
+}
+ul.link-menu-top-right li:first-child a{
+    color: blue;
+}
+
+.button{
+    line-height: 45px;
+    border-radius: 3px;
+    font-size: 18px;
+}
+
+.button-2{
+    background-color: white;
+    color: orange;
+    padding: 10px;
+}
+.button-3{
+    background-color: orange;
+    color: white;
+    padding: 10px;
+}
+
+/* ________________INIZIO REGOLE BLOCCHI INFERIORI_____________ */
+
+ul.link-menu-top-left-2 li{
+    text-decoration: none;
+    list-style:none;
+    padding-top: 30px;
+}
+
+
+/* _____________REGOLE BLOCCO DESTRA BASSO_____________ */
+div.row-top-right2 ul.link-menu-top-right-2 li{
+    display: inline-block;
+    list-style:none;
+    line-height: 20px;
+    padding-top: 35px;
+}
+ul.link-menu-top-right-2 li > a{
+    text-decoration: none;
+    padding-left: 25px;
+}
+
+li.black-2 a{
+    color: black;
+    font-size: 18px;
+}
+
+/* __________FINITE REGOLE BLOCCO DESTRA________ */
+
+
+
 
 
 /* ______________INIZIO REGOLE PRIMA SESSIONE JUOMBOTRON___________ */
 
 #jumbotron{
-    min-height: 600px;
+    min-height: 650px;
     background-color: #fff1ee;
+    background-image: url(../img/jumbotron.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 
+/* ____________REGOLE DIVISORE________________ */
+
+div.division{
+    background-color: lightgreen;
+    height: 100px;
+    width: 100%;
+    border-top: 3px solid black;
+    border-bottom: 3px solid black;
+}
 
 
+.title{
+    margin-top: 50px;
+    width: 40%;
+}
+.title h1{
+    font-size: 45px;
+    padding-bottom: 30px;
+}
+.title p{
+    font-size: 15px;
+    padding-bottom: 30px;
+}
 
+a.title-block{
+    display: inline-block;
+    text-decoration: none;
+}
 
-
-
+span.subtitle{
+    padding-top: 30px;
+    font-size: 12px;
+    display: block;
+}
 
 
 /* _______________INIZO REGOLE DELLA SECONDA SESSIONE POWERFULL___________ */
@@ -145,12 +281,11 @@ _______ (DATO KE ABBIAMO DUE DIV) CON UN BORDO E DEVE ESSERE DISTANZIATO DI 30px
 
 /* ________AL BUTTON, PER ADATTARLO CADO A DIRGLI KE L'ALTEZZA DELLA LINEA DEVE ESSERE ALTA 45px, E I SUOI
 ________LATI DEVONO AVERE 30px AI SUOI LATI________ */
-.button{
-    line-height: 45px;
-    padding: 0 30px;
+
+.button-4{
     background-color: orange;
     color: white;
-    border-radius: 3px;
+    padding: 10px 30px 10px 30px;
 }
 
 /* _________TUTTE LE UL, FIGLIE DI CARD NON DEVONO AVERE I PALLINI E DEVONO ESSERE A SINISTRA DEL DIV________ */
