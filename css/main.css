@@ -117,7 +117,7 @@ ul.link-menu-top-right li > a{
     margin-left: 25px;
 }
 ul.link-menu-top-right li:first-child a{
-    color: blue;
+    color: #0098b4;
 }
 
 .button{
@@ -128,11 +128,12 @@ ul.link-menu-top-right li:first-child a{
 
 .button-2{
     background-color: white;
-    color: orange;
+    color: #ed7e62;
     padding: 10px;
+    border: 1px solid #ed7e62;
 }
 .button-3{
-    background-color: orange;
+    background-color: #ed7e62;
     color: white;
     padding: 10px;
 }
@@ -177,18 +178,20 @@ li.black-2 a{
     background-image: url(../img/jumbotron.png);
     background-position: right;
     background-repeat: no-repeat;
-    background-size: cover;
+    position: relative;
 }
 
 
 /* ____________REGOLE DIVISORE DELLE SESSIONE________________ */
 
 div.division{
-    background-color: lightgreen;
-    height: 100px;
+    background-color: #bbe9e4;
+    height: 64px;
     width: 100%;
     border-top: 3px solid black;
     border-bottom: 3px solid black;
+    position: absolute;
+    bottom:0;
 }
 
 /* _____________REGOLE TITOLO DEL jumbotron___________ */
@@ -223,7 +226,7 @@ span.subtitle{
 #powerfull{
     min-height: 900px;                /*ALTEZZA MINIMA*/
     background-color: #f5f8fa;        /*QUI ANDRO' A METTERE IMMAGINE TESTO ECC*/
-
+    padding-bottom: 50px;
 }
 
 .hiphen{
@@ -317,7 +320,7 @@ ul.link-image li{
 }
 
 ul li i.link-check{
-    color: orange;
+    color: #ed7e62;
     padding-right: 12px;
 }
 
@@ -350,7 +353,7 @@ div.card:last-child{
 /* _________LE CLASSI CARD  COLL-3, DEVONO AVERE AL LORO INTERNO UN "PADDING" PARI A 20 SOPRA SOTTO
 _________50 AI LATI_______ */
 .card.coll-3{
-    padding: 20px 50px;
+    padding: 20px 80px;
 }
 
 /* ________STIAMO DICENDO CHE TUTTI I DIV FIGLI DELLA CLASSE CARD, DEVONO ESSERE ALTI MINIMO 100PX
@@ -365,7 +368,8 @@ _______ (DATO KE ABBIAMO DUE DIV) CON UN BORDO E DEVE ESSERE DISTANZIATO DI 30px
 
 .coll-3.card div:first-child{
     border-bottom: 1px solid black;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 
@@ -373,7 +377,7 @@ _______ (DATO KE ABBIAMO DUE DIV) CON UN BORDO E DEVE ESSERE DISTANZIATO DI 30px
 ________LATI DEVONO AVERE 30px AI SUOI LATI________ */
 
 .button-4{
-    background-color: orange;
+    background-color: #ed7e62;
     color: white;
     padding: 10px 30px 10px 30px;
     text-decoration: none;
@@ -383,4 +387,51 @@ ________LATI DEVONO AVERE 30px AI SUOI LATI________ */
 .card ul{
     list-style:none;
     text-align: left;
+}
+
+div.card-bottom h3{
+    font-size: 20px;
+}
+
+div.card-bottom h3.card-bottom-into, h4.card-bottom-into, p.card-bottom-into, ul.card-bottom-into{
+    padding-bottom: 30px;
+}
+/* ____________INIZIO TERZA SESSIONE TITOLO____________ */
+
+#table{
+    min-height: 600px;
+    background-image: linear-gradient(to right, #459aab, #4dacb1, #52b6a9 );
+}
+
+div.title-2 > h2.white, p.white{
+    color:white;
+    text-align: center;
+    padding-top: 50px;
+}
+
+div.title-2 h2.white{
+    font-size: 38px;
+    width: 94%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+div.title-2 p.white{
+    font-size: 19px;
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+/* __________________FINE TITOLO_______________ */
+
+
+
+/* _____________INIZIO TABELLA RIGA SOPRA_________________ */
+
+div.row-top-2{
+    float:left;
+}
+
+div.row-bottom-2{
+    float: left;
 }
