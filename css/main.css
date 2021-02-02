@@ -424,14 +424,65 @@ div.title-2 p.white{
 
 /* __________________FINE TITOLO_______________ */
 
+/* _________________DIVISIONE TITOLO E TABELLA__________ */
+.row{
+    margin: 50px 0 0 0;
+}
 
 
 /* _____________INIZIO TABELLA RIGA SOPRA_________________ */
 
 div.row-top-2{
-    float:left;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
 }
 
 div.row-bottom-2{
-    float: left;
+    border-right: 1px solid white;
+    padding: 35px 2%;
+}
+
+div.row-top-2, div.row-bottom-2{
+    float:left;
+    width: 25%;
+    text-align: center;
+    color: white;
+    padding: 35px 2%;
+}
+
+div.row-top-2:last-child, div.row-bottom-2:last-child{
+    border-right: none;
+}
+
+div.row-top-2 span.block-table{
+    display: block;
+    padding: 10px 50px;
+    font-size: 12px;
+}
+div.row-top-2 span.write-bold{
+    font-size: 30px;
+    vertical-align: middle;
+
+}
+div.row-top-2 i.span-plus{
+    font-size: 10px;
+    vertical-align: middle;
+}
+/* ___________________INIZIO SECONDA RIGA____________ */
+
+
+
+div.row-bottom-2 span.block-table{
+    display: block;
+    padding: 10px 50px;
+    font-size: 12px;
+}
+div.row-bottom-2 span.write-bold{
+    font-size: 30px;
+    vertical-align: middle;
+
+}
+div.row-bottom-2 i.span-plus{
+    font-size: 10px;
+    vertical-align: middle;
 }
