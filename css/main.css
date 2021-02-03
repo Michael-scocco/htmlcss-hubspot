@@ -166,11 +166,9 @@ div.row-top-right2{
 ul.link-menu-top-right-2{
     line-height: 80px;
 }
-li.logo a > img{
-    line-height: 80px;
-}
-img{
-    padding-top: 4px;
+
+img.logo-header{
+    vertical-align: middle;
 }
 
 li.black-2 a{
@@ -535,8 +533,8 @@ div.row-bottom-2 i.span-plus{
 /* _________________INIZIO QUARTA SESSIONE__________ */
 
 #partners{
-    min-height: 600px;
     margin-top: 50px;
+    padding-bottom: 50px;
 }
 
 .row-partners::after{              /*________CREO IL MIO CLEAR-FIX_________*/
@@ -554,8 +552,6 @@ div.row-top-left-3{
 
 div.row-top-right-3{
     width: 68%;
-    height: 50px;
-    line-height: 100px;
     float:right;
 }
 
@@ -575,26 +571,36 @@ div.container-partners  ul.link-partners-top li, ul.link-partners-bottom li{
     display: inline-block;
 }
 
+/* ______DO AL CONATAINER-PARTNERS UNA LUNGEZZA DEL 70% DATO CHE NON E' ALLA FINE LE SCRITTE */
 
 div.container-partners{
     width: 70%;
 }
 
-ul.link-partners-top, ul.link-partners-bottom{
+/* AL UL GLI DICO CHE DEVE PRENDERE IL 100% DEL CONTENUTO DI CONTAINER */
+
+ul.link-partners-top{
     width: 100%;
-    line-height: 50px;
+    padding-top: 15px;
 }
+
+/* AGLI LI GLI DICO CHE OGNI SINGOLO LI DEVE OCCUPARE IL 24% DELLO SPAXIO DI UL */
 
 li.partners-size{
-    width: 14%;
+    width: 24%;
 }
+
+/* AD IMG CHE OGNI IMMAGINE SIA AL SUO 100% E ESPANSIONE ED USO vertical-middle, PER A LINEARE
+AL MEZZO LE IMMAGINI, FOSSERE STATE SCRITTE USAVO IL "LINE-height", DANDO AL BLOCCO LA STESSA
+ALEZZA */
 
 img.size-image-top, img.size-image-bottom{
-    height: auto;
     width: 100%;
+    padding-right: 15px;
+    vertical-align: middle;
 }
 
-______________INIZIO RIGA INFERIORE_____________
+/* ______________INIZIO RIGA INFERIORE_____________ */
 
 .row-woman::after{              /*________CREO IL MIO CLEAR-FIX_________*/
     content: "";
@@ -602,21 +608,23 @@ ______________INIZIO RIGA INFERIORE_____________
     clear: both;
 }
 
-
-
+.row-woman{
+    margin-top: 40px;
+}
 /* ________________INIZIO RIGA INFERIORE SINISTRA___________ */
 
 
 div.row-bottom-left-3{
     float: left;
+    width: 40%;
 }
 
 div.title-3{
     margin-top: 50px;
-    width: 32%;
+    width: 76%;
 }
 .title-3 h2{
-    font-size: 28px;
+    font-size: 30px;
     padding-bottom: 30px;
 }
 
@@ -629,4 +637,30 @@ div.title-3{
 
 div.row-bottom-right-3{
     float: right;
+    width: 40%;
+}
+
+div.row-bottom-right-3 >img{
+    width: 50%;
+}
+
+footer{
+    min-height: 600px;
+    background-color: #374959;
+}
+
+.row-footer-top::after{              /*________CREO IL MIO CLEAR-FIX_________*/
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.pillars{
+    min-height: 300px;
+    min-width: 20%;
+    background-color: pink;
+    color: white;
+    border: 1px solid black;
+    margin-right: 5%;
+    float: left;
 }
