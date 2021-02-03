@@ -23,7 +23,7 @@ header{
 .container{
     width: 100%;                /*________AL CONTAINER GLI VADO A DIRE KE DEVE ESSERE AL 100%*/
     max-width: 1300px;          /*________TUTTO QUELLO KE CI METTO NON DEVE SUPERARE I 1300PX*/
-    min-height: 100px;          /*________ALTEZZA MINIMA 100PX, MA PUO' ESSERE SUPERATA*/
+    min-height: 80px;          /*________ALTEZZA MINIMA 100PX, MA PUO' ESSERE SUPERATA*/
     margin: 0 auto;             /*________VOGLIO CHE SIA CENTRATO ALL'INTERNO DI ROW______*/
     border: 1px solid black;
 }
@@ -142,10 +142,16 @@ ul.link-menu-top-right li:first-child a{
 
 /* ________________INIZIO REGOLE BLOCCHI INFERIORI_____________ */
 
+div.row-top-left2{
+    line-height: 80px;
+}
+ul.link-menu-top-left-2{
+    line-height: 80px;
+}
+
 ul.link-menu-top-left-2 li{
     text-decoration: none;
     list-style:none;
-    padding-top: 30px;
 }
 
 
@@ -153,17 +159,28 @@ ul.link-menu-top-left-2 li{
 div.row-top-right2 ul.link-menu-top-right-2 li{
     display: inline-block;
     list-style:none;
-    line-height: 20px;
-    padding-top: 35px;
 }
-ul.link-menu-top-right-2 li > a{
-    text-decoration: none;
-    padding-left: 25px;
+div.row-top-right2{
+    line-height: 80px;
+}
+ul.link-menu-top-right-2{
+    line-height: 80px;
+}
+li.logo a > img{
+    line-height: 80px;
+}
+img{
+    padding-top: 4px;
 }
 
 li.black-2 a{
     color: black;
     font-size: 18px;
+}
+
+ul.link-menu-top-right-2 li > a{
+    text-decoration: none;
+    padding-left: 25px;
 }
 ul.link-menu-top-right-2 li.black-2 a > i{
     padding-left: 10px;
@@ -519,6 +536,13 @@ div.row-bottom-2 i.span-plus{
 
 #partners{
     min-height: 600px;
+    margin-top: 50px;
+}
+
+.row-partners::after{              /*________CREO IL MIO CLEAR-FIX_________*/
+    content: "";
+    display: table;
+    clear: both;
 }
 
 div.row-top-left-3{
@@ -529,8 +553,9 @@ div.row-top-left-3{
 }
 
 div.row-top-right-3{
-    min-width: 30%;
-    min-height: 200px;
+    width: 68%;
+    height: 50px;
+    line-height: 100px;
     float:right;
 }
 
@@ -546,10 +571,62 @@ div.row-top-left-3 p{
 
 /* _____________REGOLE PARTE RIGHT_________ */
 
-div.container-partners > ul.link-partners img.size-image-top{
-    height: 12px;
+div.container-partners  ul.link-partners-top li, ul.link-partners-bottom li{
+    display: inline-block;
 }
 
-div.container-partners > ul.link-partners img.size-image-bottom{
-    height: 32px;
+
+div.container-partners{
+    width: 70%;
+}
+
+ul.link-partners-top, ul.link-partners-bottom{
+    width: 100%;
+    line-height: 50px;
+}
+
+li.partners-size{
+    width: 14%;
+}
+
+img.size-image-top, img.size-image-bottom{
+    height: auto;
+    width: 100%;
+}
+
+______________INIZIO RIGA INFERIORE_____________
+
+.row-woman::after{              /*________CREO IL MIO CLEAR-FIX_________*/
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+
+/* ________________INIZIO RIGA INFERIORE SINISTRA___________ */
+
+
+div.row-bottom-left-3{
+    float: left;
+}
+
+div.title-3{
+    margin-top: 50px;
+    width: 32%;
+}
+.title-3 h2{
+    font-size: 28px;
+    padding-bottom: 30px;
+}
+
+.title-3 p{
+    font-size: 15px;
+    padding-bottom: 30px;
+}
+
+/* ________________INIZIO RIGA INFERIORE DESTRA_____________ */
+
+div.row-bottom-right-3{
+    float: right;
 }
