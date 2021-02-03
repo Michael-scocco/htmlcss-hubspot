@@ -74,7 +74,8 @@ div.row-top-left ul.link-menu-top-left li{       /* "LI" FILGIO DI "UL" A SUA VO
 }
 
 div.row-top-left{
-    padding: 40px 0;
+    line-height: 80px;
+    /* padding: 40px 0; */
 }
 
 li.black a{
@@ -103,7 +104,8 @@ div.row-top-left li.black > a > span.distance:last-child{
 /* _______________INIZIO REGOLE BLOCCHI DESTRA_______________ */
 
 div.row-top-right{
-    padding: 28px 0;
+    line-height: 80px;
+    /* padding: 28px 0; */
 }
 
 div.row-top-right ul.link-menu-top-right li{
@@ -162,6 +164,9 @@ ul.link-menu-top-right-2 li > a{
 li.black-2 a{
     color: black;
     font-size: 18px;
+}
+ul.link-menu-top-right-2 li.black-2 a > i{
+    padding-left: 10px;
 }
 
 /* __________FINITE REGOLE BLOCCO DESTRA________ */
@@ -259,10 +264,20 @@ div.powerfull-image p{
 ___________DATO KE OVVIAMENTE LE ABIAMO MESSE DENTRO IL BLOCCO CONTAINER CHE HA GIA LA REGOLA DEL CLEAR-FIX
 ___________MA DATO CHE VOLGIAMO KE UNA CARTA RIMANE SOPRA E SOLO LE 3 SOTTO FLOTTINO CADO A DIRE CON "CALC"
 ___________CHE SOLO I DIV, CON CLASSE CARD, E COLL-3, DEVONO ESSERE POSIZIONATI AD UNA CERTA DISTANZA______ */
+.row-card::after{              /*________CREO IL MIO CLEAR-FIX_________*/
+    content: "";
+    display: table;
+    clear: both;
+}
 .card{
     background-color: white;
     border-radius: 3px;
     float: left;
+}
+.card::after{              /*________CREO IL MIO CLEAR-FIX AL PADRE DIRETTO DELLE CARTE_________*/
+    content: "";
+    display: table;
+    clear: both;
 }
 /* ______________INIZIO REGOLE PER CARTA IN ALTO______________ */
 
@@ -399,7 +414,6 @@ div.card-bottom h3.card-bottom-into, h4.card-bottom-into, p.card-bottom-into, ul
 /* ____________INIZIO TERZA SESSIONE TITOLO____________ */
 
 #table{
-    min-height: 600px;
     background-image: linear-gradient(to right, #459aab, #4dacb1, #52b6a9 );
 }
 
@@ -425,7 +439,13 @@ div.title-2 p.white{
 /* __________________FINE TITOLO_______________ */
 
 /* _________________DIVISIONE TITOLO E TABELLA__________ */
-.row{
+
+.row-table::after{              /*________CREO IL MIO CLEAR-FIX_________*/
+    content: "";
+    display: table;
+    clear: both;
+}
+.row-table{
     margin: 50px 0 0 0;
 }
 
@@ -470,7 +490,14 @@ div.row-top-2 i.span-plus{
 }
 /* ___________________INIZIO SECONDA RIGA____________ */
 
-
+.row-table-2::after{              /*________CREO IL MIO CLEAR-FIX_________*/
+    content: "";
+    display: table;
+    clear: both;
+}
+.row-table-2{
+    padding-bottom: 100px;
+}
 
 div.row-bottom-2 span.block-table{
     display: block;
@@ -485,4 +512,44 @@ div.row-bottom-2 span.write-bold{
 div.row-bottom-2 i.span-plus{
     font-size: 10px;
     vertical-align: middle;
+}
+
+
+/* _________________INIZIO QUARTA SESSIONE__________ */
+
+#partners{
+    min-height: 600px;
+}
+
+div.row-top-left-3{
+    width: 30%;
+    text-align:left;
+    float: left;
+    padding: 0 110px;
+}
+
+div.row-top-right-3{
+    min-width: 30%;
+    min-height: 200px;
+    float:right;
+}
+
+/* ________REGOLE PARTE LEFT_________ */
+
+span.size-partners{
+    font-size: 40px;
+}
+
+div.row-top-left-3 p{
+    padding-top: 30px;
+}
+
+/* _____________REGOLE PARTE RIGHT_________ */
+
+div.container-partners > ul.link-partners img.size-image-top{
+    height: 12px;
+}
+
+div.container-partners > ul.link-partners img.size-image-bottom{
+    height: 32px;
 }
