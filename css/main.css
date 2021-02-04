@@ -3,10 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+body{
+    margin-top: 160px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
 
 /* ____________ALL'HEADER VADO A CREARE UNA OMBREGGIATURA KE SERVE AL FIXED_________ */
 header{
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+p{
+    line-height: 1.7em;
 }
 
 /* ____________QUI CREO LE RIGHE PER INSERIRE IL CONTAINER_________ */
@@ -19,13 +31,17 @@ header{
     background-color: #ccc;    /*_________DEFINISCO IL COLORE SFONDO RIGA SOPRA________*/
 }
 
+.row.row-bottom{
+    background-color: white;
+}
+
 /* ________CREO IL CONTAINER DA CENTRALIZZARE I MIEI MENU-LINK___________ */
 .container{
     width: 100%;                /*________AL CONTAINER GLI VADO A DIRE KE DEVE ESSERE AL 100%*/
     max-width: 1300px;          /*________TUTTO QUELLO KE CI METTO NON DEVE SUPERARE I 1300PX*/
     min-height: 80px;          /*________ALTEZZA MINIMA 100PX, MA PUO' ESSERE SUPERATA*/
     margin: 0 auto;             /*________VOGLIO CHE SIA CENTRATO ALL'INTERNO DI ROW______*/
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .container::after{              /*________CREO IL MIO CLEAR-FIX_________*/
     content: "";
@@ -220,7 +236,7 @@ div.division{
     width: 40%;
 }
 .title h1{
-    font-size: 45px;
+    font-size: 46px;
     padding-bottom: 30px;
 }
 .title p{
@@ -317,7 +333,7 @@ ___________CHE SOLO I DIV, CON CLASSE CARD, E COLL-3, DEVONO ESSERE POSIZIONATI 
 }
 .card .float-left{
     padding: 70px 130px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 /* ____________REGOLE CARD IN ALTO LATO DESTRO__________ */
@@ -547,11 +563,10 @@ div.row-top-left-3{
     width: 30%;
     text-align:left;
     float: left;
-    padding: 0 110px;
 }
 
 div.row-top-right-3{
-    width: 68%;
+    max-width: 60%;
     float:right;
 }
 
@@ -559,10 +574,12 @@ div.row-top-right-3{
 
 span.size-partners{
     font-size: 40px;
+    margin-bottom: 30px;
+    display:inline-block;
 }
 
 div.row-top-left-3 p{
-    padding-top: 30px;
+    max-width: 200px;
 }
 
 /* _____________REGOLE PARTE RIGHT_________ */
@@ -574,20 +591,24 @@ div.container-partners  ul.link-partners-top li, ul.link-partners-bottom li{
 /* ______DO AL CONATAINER-PARTNERS UNA LUNGEZZA DEL 70% DATO CHE NON E' ALLA FINE LE SCRITTE */
 
 div.container-partners{
-    width: 70%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-bottom: 200px;
 }
 
 /* AL UL GLI DICO CHE DEVE PRENDERE IL 100% DEL CONTENUTO DI CONTAINER */
 
 ul.link-partners-top{
-    width: 100%;
+    max-width: 100%;
     padding-top: 15px;
+    width: 650px;
 }
 
 /* AGLI LI GLI DICO CHE OGNI SINGOLO LI DEVE OCCUPARE IL 24% DELLO SPAXIO DI UL */
 
 li.partners-size{
     width: 24%;
+    padding-bottom: 15px;
 }
 
 /* AD IMG CHE OGNI IMMAGINE SIA AL SUO 100% E ESPANSIONE ED USO vertical-middle, PER A LINEARE
@@ -596,7 +617,7 @@ ALEZZA */
 
 img.size-image-top, img.size-image-bottom{
     width: 100%;
-    padding-right: 15px;
+    padding-right: 30px;
     vertical-align: middle;
 }
 
@@ -608,9 +629,7 @@ img.size-image-top, img.size-image-bottom{
     clear: both;
 }
 
-.row-woman{
-    margin-top: 40px;
-}
+
 /* ________________INIZIO RIGA INFERIORE SINISTRA___________ */
 
 
@@ -637,16 +656,17 @@ div.title-3{
 
 div.row-bottom-right-3{
     float: right;
-    width: 40%;
+    width: 22%;
 }
 
 div.row-bottom-right-3 >img{
-    width: 50%;
+    width: 100%;
 }
 
 footer{
     min-height: 600px;
     background-color: #374959;
+    color: #c7d1dd;
 }
 
 .row-footer-top::after{              /*________CREO IL MIO CLEAR-FIX_________*/
@@ -655,12 +675,92 @@ footer{
     clear: both;
 }
 
-.pillars{
-    min-height: 300px;
+.row-footer-top{
+    padding-bottom: 80px;
+}
+div.pillars{
     min-width: 20%;
-    background-color: pink;
     color: white;
-    border: 1px solid black;
     margin-right: 5%;
     float: left;
+    margin-top:30px;
+
+}
+
+ul.pillars-link li{
+    text-decoration: none;
+    list-style:none;
+    padding-bottom: 12px;
+}
+
+div.pillars > h4{
+    padding-bottom: 20px;
+    color: white;
+}
+
+a.buttom-footer{
+    line-height: 10px;
+    background-color: #dbdee0;
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #dbdee0;
+    color: #294357;
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px 0;
+}
+
+ul.pillars-link-bottom > li{
+    display: inline-block;
+    text-decoration: none;
+    list-style:none;
+    padding-right: 24px;
+}
+
+div.row-footer-bottom{
+    text-align: center;
+    border-bottom: 1px solid;
+    margin-bottom: 30px;
+}
+
+ul.link-footer-bottom > li{
+    display: inline-block;
+    text-decoration: none;
+    list-style:none;
+    padding-right: 16px;
+    padding-bottom: 20px;
+}
+
+div.row-footer-bottom::after{              /*________CREO IL MIO CLEAR-FIX_________*/
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.footer-bottom-left{
+    float: left;
+}
+div.footer-bottom-right{
+    float:right;
+}
+
+.logo-footer{
+    color:white;
+    display: block;
+    padding-bottom: 10px;
+}
+.span.footer{
+    display: block;
+    font-size: 12px;
+}
+
+ul.link-footer-bottom-right > li{
+    display: inline-block;
+    text-decoration: none;
+    list-style:none;
+    padding-right: 16px;
+}
+
+ul.link-footer-bottom-right > li:last-child{
+    padding-right: 0;
 }
