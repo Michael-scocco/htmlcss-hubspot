@@ -43,7 +43,7 @@ p{
     margin: 0 auto;             /*________VOGLIO CHE SIA CENTRATO ALL'INTERNO DI ROW______*/
     /* border: 1px solid black; */
 }
-.container::after{              /*________CREO IL MIO CLEAR-FIX_________*/
+.clear-fix::after{              /*________CREO IL MIO CLEAR-FIX_________*/
     content: "";
     display: table;
     clear: both;
@@ -265,9 +265,6 @@ span.subtitle{
     padding-bottom: 50px;
 }
 
-.hiphen{
-    /* width: 100px; */
-}
 
 div.powerfull-image{
 
@@ -295,21 +292,18 @@ div.powerfull-image p{
 ___________DATO KE OVVIAMENTE LE ABIAMO MESSE DENTRO IL BLOCCO CONTAINER CHE HA GIA LA REGOLA DEL CLEAR-FIX
 ___________MA DATO CHE VOLGIAMO KE UNA CARTA RIMANE SOPRA E SOLO LE 3 SOTTO FLOTTINO CADO A DIRE CON "CALC"
 ___________CHE SOLO I DIV, CON CLASSE CARD, E COLL-3, DEVONO ESSERE POSIZIONATI AD UNA CERTA DISTANZA______ */
-.row-card::after{              /*________CREO IL MIO CLEAR-FIX_________*/
-    content: "";
-    display: table;
-    clear: both;
-}
+
+/*________CREO IL MIO CLEAR-FIX
+            ROW CARD_________*/
+
 .card{
     background-color: white;
     border-radius: 3px;
     float: left;
 }
-.card::after{              /*________CREO IL MIO CLEAR-FIX AL PADRE DIRETTO DELLE CARTE_________*/
-    content: "";
-    display: table;
-    clear: both;
-}
+/*________CREO IL MIO CLEAR-FIX AL PADRE DIRETTO DELLE CARTE
+            CARD_________*/
+
 /* ______________INIZIO REGOLE PER CARTA IN ALTO______________ */
 
 .float-left{
@@ -471,11 +465,9 @@ div.title-2 p.white{
 
 /* _________________DIVISIONE TITOLO E TABELLA__________ */
 
-.row-table::after{              /*________CREO IL MIO CLEAR-FIX_________*/
-    content: "";
-    display: table;
-    clear: both;
-}
+  /*________CREO IL MIO CLEAR-FIX
+              ROW TABLE_________*/
+
 .row-table{
     margin: 50px 0 0 0;
 }
@@ -521,11 +513,9 @@ div.row-top-2 i.span-plus{
 }
 /* ___________________INIZIO SECONDA RIGA____________ */
 
-.row-table-2::after{              /*________CREO IL MIO CLEAR-FIX_________*/
-    content: "";
-    display: table;
-    clear: both;
-}
+ /*________CREO IL MIO CLEAR-FIX
+            ROW TABLE 2_________*/
+
 .row-table-2{
     padding-bottom: 100px;
 }
@@ -553,11 +543,9 @@ div.row-bottom-2 i.span-plus{
     padding-bottom: 50px;
 }
 
-.row-partners::after{              /*________CREO IL MIO CLEAR-FIX_________*/
-    content: "";
-    display: table;
-    clear: both;
-}
+/*________CREO IL MIO CLEAR-FIX
+            ROW PARTENERS_________*/
+
 
 div.row-top-left-3{
     width: 30%;
@@ -623,11 +611,8 @@ img.size-image-top, img.size-image-bottom{
 
 /* ______________INIZIO RIGA INFERIORE_____________ */
 
-.row-woman::after{              /*________CREO IL MIO CLEAR-FIX_________*/
-    content: "";
-    display: table;
-    clear: both;
-}
+ /*________CREO IL MIO CLEAR-FIX
+             ROW WOMAN_________*/
 
 
 /* ________________INIZIO RIGA INFERIORE SINISTRA___________ */
@@ -669,11 +654,9 @@ footer{
     color: #c7d1dd;
 }
 
-.row-footer-top::after{              /*________CREO IL MIO CLEAR-FIX_________*/
-    content: "";
-    display: table;
-    clear: both;
-}
+/*________CREO IL MIO CLEAR-FIX
+            ROW FOOTER TOP_________*/
+
 
 .row-footer-top{
     padding-bottom: 80px;
@@ -731,11 +714,8 @@ ul.link-footer-bottom > li{
     padding-bottom: 20px;
 }
 
-div.row-footer-bottom::after{              /*________CREO IL MIO CLEAR-FIX_________*/
-    content: "";
-    display: table;
-    clear: both;
-}
+ /*________CREO IL MIO CLEAR-FIX
+             ROW FOOTER BOTTOM_________*/
 
 div.footer-bottom-left{
     float: left;
